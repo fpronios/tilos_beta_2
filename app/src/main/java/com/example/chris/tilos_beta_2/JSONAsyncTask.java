@@ -20,9 +20,9 @@ import java.net.URL;
  */
 
 public class JSONAsyncTask extends AsyncTask<String, Void, String> {
-    public static final String REQUEST_METHOD = "PUT";
-    public static final int READ_TIMEOUT = 10000;//15000;
-    public static final int CONNECTION_TIMEOUT = 10000;//15000;
+    public static final String REQUEST_METHOD = "GET";
+    public static final int READ_TIMEOUT = 2000;//15000;
+    public static final int CONNECTION_TIMEOUT = 2000;//15000;
 
 
 

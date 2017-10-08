@@ -49,7 +49,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.toolbox.JsonObjectRequest;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -391,6 +395,9 @@ public class MainActivity extends AppCompatActivity {
                         int val2 = row2.getValue();
                         int val3 = row3.getValue();
 
+                        btn.setBackgroundColor(Color.parseColor("#64C800"));
+                        btn.setText("Connected!");
+
                         if (val1 == 1) {
                             sw1.setChecked(true);
                         } else {
@@ -406,35 +413,23 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             sw3.setChecked(false);
                         }
+
                     }
 
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         txt.setText("Some error occurred!!");
+                        if (volleyError.networkResponse.statusCode == 504 || volleyError.networkResponse.statusCode == 408) {
+                            btn.setBackgroundColor(Color.parseColor("#C82C32"));
+                            btn.setText("Connection To Server Lost...");
+                        }
                     }
                 });
 
                 addToRequestQueue(request2, "autoGetRequest2");
-                /*
-                try {
-                    final JSONAsyncTask httpAsync = new JSONAsyncTask();
-                    result = httpAsync.execute(r1 + "/ -d  \'\"{\"_id\":\"1\",\"_rev\":\"2-f9cbfbdd9257c5221b2e6b77de3fcaa4\",\"status\":0}\"\'").get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-                if (result=="TimeOut"){
-                    //btn.setBackgroundColor(16711730);
-                    btn.setBackgroundColor(Color.RED);
-                    btn.setText("Connection Lost");
-                }else{
-                    //btn.setBackgroundColor(3322930);
-                    btn.setBackgroundColor(Color.GREEN);
-                    btn.setText("Connected");
-                }
-                */
+
+
                 doTheAutoRefresh();
             }
         }, 3000);

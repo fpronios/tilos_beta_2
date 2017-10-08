@@ -7,8 +7,8 @@
     tools:context="com.example.chris.tilos_beta_2.MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -102,7 +102,7 @@
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Main Supply (kVA):" />
+                    android:text="Load 2 (kVA):" />
 
                 <TextView
                     android:id="@+id/showV2"
@@ -171,7 +171,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="0dp"
-            android:text="Fetch Data"
+            android:freezesText="true"
+            android:text="Testing Connection..."
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="0dp"
             tools:layout_height="match_parent" />

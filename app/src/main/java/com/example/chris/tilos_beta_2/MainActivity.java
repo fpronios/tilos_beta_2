@@ -66,8 +66,9 @@ public class MainActivity extends AppCompatActivity {
     String r1 = "http://192.168.1.8:5984/control/1";
     String r2 = "http://192.168.1.8:5984/control/2";
     String r3 = "http://192.168.1.8:5984/control/3";
-    String url2 = "http://192.168.1.8:5984/meas/_design/last/_view/new-view?limit=1";
+    String url2 = "http://192.168.1.8:5984/meas/_design/last/_view/new-view?limit=1&descending=true";
     String url3 = "http://192.168.1.8:5984/control/_design/check/_view/new-view";
+    String urlreq = "http://192.168.1.8:5984/meas/_design/last/_view/new-view?limit=100&descending=true";
     String result;
     private RequestQueue requestQueue;
 
@@ -350,21 +351,24 @@ public class MainActivity extends AppCompatActivity {
                         List<Row> rows = measured.getRows();
                         Row row = rows.get(0);
 
-                        // txt.setText(s);
-                        int val = row.getValue().get(0);
+                        List<Value> vals = row.getValue();
+                        Value valloc = vals.get(0);
+                        int val = valloc.getV();
+
+
                         String tval = Integer.toString(val);
 
                         txt1.setText(tval);
 
-                        val = row.getValue().get(1);
+                        val = valloc.getV1();
                         tval = Integer.toString(val);
                         txt2.setText(tval);
 
-                        val = row.getValue().get(2);
+                        val = valloc.getV2();
                         tval = Integer.toString(val);
                         txt3.setText(tval);
 
-                        val = row.getValue().get(3);
+                        val = valloc.getV3();
                         tval = Integer.toString(val);
                         txt4.setText(tval);
                     }
@@ -396,7 +400,7 @@ public class MainActivity extends AppCompatActivity {
                         int val3 = row3.getValue();
 
                         btn.setBackgroundColor(Color.parseColor("#64C800"));
-                        btn.setText("Connected!");
+                        btn.setText("Connected!!!");
 
                         if (val1 == 1) {
                             sw1.setChecked(true);

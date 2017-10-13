@@ -3,9 +3,7 @@ package com.example.chris.tilos_beta_2;
 /**
  * Created by chris on 10/3/2017.
  */
-
 import java.util.List;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +17,7 @@ public class Row {
     private String key;
     @SerializedName("value")
     @Expose
-    private List<Integer> value = null;
+    private List<Value> value = null;
 
     public String getId() {
         return id;
@@ -37,14 +35,12 @@ public class Row {
         this.key = key;
     }
 
-    public List<Integer> getValue() {
+    public List<Value> getValue() {
         return value;
     }
 
-    public void setValue(List<Integer> value) {
+    public void setValue(List<Value> value) {
         this.value = value;
     }
 
 }
-
-

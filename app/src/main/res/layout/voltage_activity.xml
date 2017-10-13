@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Controls" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/Voltage History"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltage History" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/dhist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Demand History" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/lastrecv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Received" />
+    </android.support.design.widget.TabLayout>
+</LinearLayout>

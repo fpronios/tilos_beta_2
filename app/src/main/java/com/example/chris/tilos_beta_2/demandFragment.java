@@ -241,7 +241,7 @@ public class demandFragment extends Fragment implements
         LineDataSet set1;
 
         // create a dataset and give it a type
-        set1 = new LineDataSet(yVals, "L1-N Voltage (V): ");
+        set1 = new LineDataSet(yVals, " kW ");
         set1.setFillAlpha(110);
         set1.setFillColor(clr);
 
@@ -361,7 +361,7 @@ public class demandFragment extends Fragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_voltage, container, false);
+        View v = inflater.inflate(R.layout.fragment_demand, container, false);
         //myFragmentView = inflater.inflate(R.layout.fragment_voltage, container, false);
         myView = (LineChart) v.findViewById(R.id.chart1);
         button = (Button) v.findViewById(R.id.button);

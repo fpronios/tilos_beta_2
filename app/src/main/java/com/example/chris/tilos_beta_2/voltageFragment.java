@@ -241,7 +241,7 @@ public class voltageFragment extends Fragment implements
         LineDataSet set1;
 
         // create a dataset and give it a type
-        set1 = new LineDataSet(yVals, "L1-N Voltage (V): ");
+        set1 = new LineDataSet(yVals, " Voltage (V): ");
         set1.setFillAlpha(110);
         set1.setFillColor(clr);
 

@@ -11,46 +11,46 @@ public class Value {
 
     @SerializedName("V1")
     @Expose
-    private Integer v1;
+    private Float v1;
     @SerializedName("V2")
     @Expose
-    private Integer v2;
+    private Float v2;
     @SerializedName("V3")
     @Expose
-    private Integer v3;
+    private Float v3;
     @SerializedName("V")
     @Expose
-    private Integer v;
+    private Float v;
 
-    public Integer getV1() {
+    public Float getV1() {
         return v1;
     }
 
-    public void setV1(Integer v1) {
+    public void setV1(Float v1) {
         this.v1 = v1;
     }
 
-    public Integer getV2() {
+    public Float getV2() {
         return v2;
     }
 
-    public void setV2(Integer v2) {
+    public void setV2(Float v2) {
         this.v2 = v2;
     }
 
-    public Integer getV3() {
+    public Float getV3() {
         return v3;
     }
 
-    public void setV3(Integer v3) {
+    public void setV3(Float v3) {
         this.v3 = v3;
     }
 
-    public Integer getV() {
+    public Float getV() {
         return v;
     }
 
-    public void setV(Integer v) {
+    public void setV(Float v) {
         this.v = v;
     }
 

@@ -22,6 +22,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -47,6 +48,7 @@ import java.util.Map;
 public class controlFragment extends Fragment {
     private static TextView txt, txt1, txt2, txt3, txt4;
     private final Handler handler = new Handler();
+
     Button btn;
     Switch sw1, sw2, sw3;
     String r1 = "http://192.168.4.1:5984/control/1";
@@ -107,6 +109,7 @@ public class controlFragment extends Fragment {
                     @Override
                     public void onResponse(String s) {
 
+                        //revReq1.setRetryPolicy(new DefaultRetryPolicy(60000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                         Gson gson = new GsonBuilder().create();
 
                         lsw1 = gson.fromJson(s, loadSwitch.class);

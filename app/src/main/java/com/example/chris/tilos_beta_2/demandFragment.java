@@ -130,7 +130,7 @@ public class demandFragment extends Fragment implements
 
         // get the legend (only possible after setting data)
         Description description = new Description();
-        description.setText("L1-N Voltage");
+        description.setText("Demand L1 (W)");
         lchart.setDescription(description);
 
         Legend l = lchart.getLegend();
@@ -148,7 +148,7 @@ public class demandFragment extends Fragment implements
         //setData(buff);
         // get the legend (only possible after setting data)
         Description description2 = new Description();
-        description2.setText("L2-N Voltage");
+        description2.setText("Demand L2 (W)");
         lchart2.setDescription(description2);
 
         l = lchart2.getLegend();
@@ -167,7 +167,7 @@ public class demandFragment extends Fragment implements
         //setData(buff);
         // get the legend (only possible after setting data)
         Description description3 = new Description();
-        description3.setText("L3-N Voltage");
+        description3.setText("Demand L3 (W)");
         lchart3.setDescription(description3);
 
         l = lchart3.getLegend();

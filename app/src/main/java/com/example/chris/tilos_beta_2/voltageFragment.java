@@ -205,12 +205,12 @@ public class voltageFragment extends Fragment implements
                         row = rows.get(i);
                         vals = row.getValue();
                         valloc = vals.get(0);
-                        float val = valloc.getV();
+                        float val = valloc.getV1();
                         //Log.e("+++++++++++++++++++++", (Integer.toString(i))+" :  "+ val);
                         ret.add(new Entry(i, val));
-                        val = valloc.getV1();
-                        ret2.add(new Entry(i, val));
                         val = valloc.getV2();
+                        ret2.add(new Entry(i, val));
+                        val = valloc.getV3();
                         ret3.add(new Entry(i, val));
                     }
 

@@ -40,7 +40,7 @@
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Main Supply (kVA):" />
+                    android:text="Main Supply (W):" />
 
                 <TextView
                     android:id="@+id/showV"
@@ -69,7 +69,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Load 1 (kVA):" />
+                    android:text="Load 1 (W):" />
 
                 <TextView
                     android:id="@+id/showV1"
@@ -103,7 +103,7 @@
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Load 2 (kVA):" />
+                    android:text="Load 2 (W):" />
 
                 <TextView
                     android:id="@+id/showV2"
@@ -137,7 +137,7 @@
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Load 3 (kVA):" />
+                    android:text="Load 3 (W):" />
 
                 <TextView
                     android:id="@+id/showV3"
